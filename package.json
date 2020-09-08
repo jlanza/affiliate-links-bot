@@ -1,0 +1,52 @@
+{
+  "name": "affiliate-links-bot",
+  "version": "1.0.0",
+  "description": "Bot to modify affiliate links in posted messages",
+  "main": "index.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "tsc --project tsconfig-build.json",
+    "build:watch": "tsc -w --project tsconfig-build.json",
+    "postinstall": "npm run build",
+    "start": "node dist/server.js",
+    "start:dev": "nodemon dist/server.js",
+    "dev": "concurrently \"npm run build:watch\" \"npm run start:dev\""
+
+  },
+  "keywords": ["telegram", "bot", "affiliate", "links"],
+  "author": "Jorge Lanza",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/json-stable-stringify": "^1.0.32",
+    "@types/koa": "^2.11.4",
+    "@types/koa-bodyparser": "^4.3.0",
+    "@types/koa__cors": "^3.0.1",
+    "@types/koa__router": "^8.0.2",
+    "@types/node": "^14.6.2",
+    "typescript": "^3.9.7"
+  },
+  "dependencies": {
+    "@koa/cors": "^3.1.0",
+    "@koa/router": "^9.4.0",
+    "anchorme": "^2.1.2",
+    "concurrently": "^5.3.0",
+    "dotenv-extended": "^2.8.0",
+    "got": "^11.5.2",
+    "json-stable-stringify": "^1.0.1",
+    "koa": "^2.13.0",
+    "koa-body": "^4.2.0",
+    "koa-bodyparser": "^4.3.0",
+    "node-fetch": "^2.6.0",
+    "nodemon": "^2.0.4",
+    "sqlite": "^4.0.14",
+    "sqlite3": "^5.0.0",
+    "telegraf": "^3.38.0",
+    "telegraf-inline-menu": "^5.0.2",
+    "telegraf-stateless-question": "^0.1.1",
+    "tinyurl": "^1.1.7",
+    "winston": "^3.3.3"
+  }
+}
